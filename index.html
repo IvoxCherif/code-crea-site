@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Code&Créa — Transformez vos idées en solutions digitales</title>
+
+  <!-- Fonts & Icons -->
+  <script src="https://kit.fontawesome.com/your-kit-id.js" crossorigin="anonymous"></script>
+  <!-- Replace above kit id with your FontAwesome kit or use CDN icons -->
+   <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Loader -->
+  <div id="loader" class="loader">
+    <div class="loader-inner">
+      <svg width="80" height="80" viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="40" stroke="#1E40AF" stroke-width="8" stroke-linecap="round" fill="none" />
+      </svg>
+      <p>Chargement...</p>
+    </div>
+  </div>
+
+  <!-- Header / Navbar -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="assets/logo.jpg" alt="Code&Créa logo" class="logo">
+        <div>
+          <h1>Code&Créa</h1>
+          <p class="slogan"><span id="typewriter"></span></p>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="#home">Accueil</a>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#about">À propos</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="btn btn-primary contact-top" data-target="#contact">Nous contacter</button>
+      <button id="nav-toggle" class="nav-toggle"><i class="fa fa-bars"></i></button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="hero">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <h2 class="headline">Transformez vos idées en solutions digitales</h2>
+        <p class="lead">Sites vitrines & e-commerce — Logiciels de gestion — Design graphique — Community management</p>
+        <div class="hero-cta">
+          <a href="#services" class="btn btn-outline">Nos services</a>
+          <a href="#portfolio" class="btn btn-primary">Voir le portfolio</a>
+        </div>
+      </div>
+
+      <!-- Animated banner / slider -->
+      <div class="hero-banner">
+        <div class="slider" id="image-slider" aria-hidden="false">
+          <div class="slide active" style="background-image:url('assets/slider1.jpeg')"></div>
+          <div class="slide" style="background-image:url('assets/slider2.jpeg')"></div>
+          <div class="slide" style="background-image:url('assets/slider3.jpeg')"></div>
+          <div class="slide" style="background-image:url('assets/slider4.jpeg')"></div>
+        </div>
+        <div class="slider-controls">
+          <button id="prev"><i class="fa fa-chevron-left"></i></button>
+          <button id="next"><i class="fa fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services">
+    <h2>Nos Services</h2>
+    <div class="services-container">
+  
+      <!-- Module : Création de Sites Web -->
+      <div class="service-module">
+        <div class="icon"><i class="fas fa-globe"></i></div>
+        <h3>Création de Sites Web</h3>
+        <p>Nous créons des sites modernes, rapides et professionnels adaptés à vos besoins.</p>
+        <button class="details-btn" data-modal="webModal">Plus de détails</button>
+      </div>
+  
+      <!-- Module : Logiciels de Gestion -->
+      <div class="service-module">
+        <div class="icon"><i class="fas fa-laptop-code"></i></div>
+        <h3>Logiciels de Gestion</h3>
+        <p>Des solutions efficaces pour gérer vos stocks, écoles ou entreprises.</p>
+        <button class="details-btn" data-modal="softModal">Plus de détails</button>
+      </div>
+  
+      <!-- Module : Design Graphique -->
+      <div class="service-module">
+        <div class="icon"><i class="fas fa-palette"></i></div>
+        <h3>Design Graphique</h3>
+        <p>Boostez votre image avec nos créations modernes et professionnelles.</p>
+        <button class="details-btn" data-modal="designModal">Plus de détails</button>
+      </div>
+  
+      <!-- Module : Community Management -->
+      <div class="service-module">
+        <div class="icon"><i class="fas fa-share-alt"></i></div>
+        <h3>Community Management</h3>
+        <p>Augmentez votre visibilité et gérez vos réseaux sociaux avec stratégie.</p>
+        <button class="details-btn" data-modal="comModal">Plus de détails</button>
+      </div>
+  
+    </div>
+  </section>
+  
+  <!-- 🔸 Fenêtres Détails (Modals) -->
+  <div id="webModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>Création de Sites Web</h3>
+      <p>Nous créons des sites adaptés à vos besoins : vitrine, e-commerce, ou professionnel.
+      <br>- Design moderne et responsive<br>
+      - Optimisation SEO (Google)<br>
+      - Intégration WhatsApp / Email / Paiement<br>
+      - Hébergement et maintenance inclus<br>
+      - Sécurité et rapidité garanties</p>
+    </div>
+  </div>
+  
+  <div id="softModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>Logiciels de Gestion</h3>
+      <p>Des logiciels adaptés à votre activité :
+      <br>- Gestion de stock et facturation<br>
+      - Gestion d’école ou entreprise<br>
+      - Rapports et statistiques automatiques<br>
+      - Sauvegarde et sécurité intégrées<br>
+      - Interface claire et intuitive</p>
+    </div>
+  </div>
+  
+  <div id="designModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>Design Graphique</h3>
+      <p>Nous créons votre identité visuelle complète :
+      <br>- Logos professionnels et modernes<br>
+      - Affiches publicitaires & Flyers<br>
+      - Bannières pour réseaux sociaux<br>
+      - Montages vidéo et miniatures YouTube<br>
+      - Rebranding complet pour votre marque</p>
+    </div>
+  </div>
+  
+  <div id="comModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>Community Management</h3>
+      <p>Nous boostons votre présence en ligne :
+      <br>- Gestion de Facebook, Instagram, TikTok, LinkedIn<br>
+      - Création de contenu attractif<br>
+      - Campagnes publicitaires ciblées<br>
+      - Analyse des performances<br>
+      - Stratégie digitale sur mesure</p>
+    </div>
+  </div>
+  
+  
+  <!-- Portfolio -->
+  <section id="portfolio" class="section portfolio">
+    <div class="container">
+      <h3 class="section-title">Portfolio / Réalisations</h3>
+      <p class="section-sub">Quelques projets récents — cliquez pour agrandir</p>
+
+      <div class="gallery">
+        <figure class="gallery-item" data-anim>
+          <img src="assets/portfolio1.jpg" alt="Projet 1">
+          <figcaption>
+            <h5>Site e-commerce - Boutique X</h5>
+            <p>Design & intégration</p>
+          </figcaption>
+        </figure>
+
+        <figure class="gallery-item" data-anim>
+          <img src="assets/portfolio2.png" alt="Projet 2">
+          <figcaption>
+            <h5>Logiciel de gestion - Entreprise Y</h5>
+            <p>Interface intuitive</p>
+          </figcaption>
+        </figure>
+
+        <figure class="gallery-item" data-anim>
+          <img src="assets/portfolio3.png" alt="Projet 3">
+          <figcaption>
+            <h5>Logo & identité - Marque Z</h5>
+            <p>Charte graphique complète</p>
+          </figcaption>
+        </figure>
+
+        <figure class="gallery-item" data-anim>
+          <img src="assets/portfolio4.jpg" alt="Projet 4">
+          <figcaption>
+            <h5>Campagne réseaux - Client A</h5>
+            <p>Community management</p>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section testimonials" id="testimonials">
+    <div class="container">
+      <h3 class="section-title">Avis clients</h3>
+      <div class="testi-wrap">
+        <button class="testi-arrow" id="testi-prev"><i class="fa fa-chevron-left"></i></button>
+        <div class="testi-list" id="testi-list">
+          <blockquote class="testi active" data-anim>
+            <p>“Code&Créa a transformé notre site en quelques semaines. Professionnel et réactif.”</p>
+            <cite>— Awa, Boutique en ligne</cite>
+          </blockquote>
+
+          <blockquote class="testi" data-anim>
+            <p>“Le logiciel de gestion livré a simplifié notre comptabilité. Travail soigné.”</p>
+            <cite>— Moussa, Entreprise</cite>
+          </blockquote>
+
+          <blockquote class="testi" data-anim>
+            <p>“Excellente gestion de nos réseaux sociaux — suivi et résultats visibles.”</p>
+            <cite>— Fatou, Marque locale</cite>
+          </blockquote>
+        </div>
+        <button class="testi-arrow" id="testi-next"><i class="fa fa-chevron-right"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section about">
+    
+    </div>
+      <h2>À propos de Code&Créa</h2>
+      <p class="intro-text">
+        Nous sommes une entreprise spécialisée dans la création numérique complète : 
+        sites web, logiciels, design graphique et gestion digitale. 
+        Notre mission est d’aider les entreprises et les particuliers à se développer dans le monde digital.
+      </p>
+    
+      <!-- Bloc 1 : Services pour les entreprises -->
+      <div class="about-section">
+        <div class="about-text">
+          <h3>🌐 Nos services dédiés aux entreprises</h3>
+          <p>
+            Chez <strong>Code&Créa</strong>, nous accompagnons les entreprises dans leur transformation digitale.  
+            Nous créons des sites web professionnels, des logiciels de gestion sur mesure et assurons la gestion de leur image sur les réseaux sociaux.  
+            Notre objectif : vous aider à booster votre productivité, votre visibilité et vos ventes en ligne.
+          </p>
+        </div>
+        <div class="about-image">
+          <img src="assets/entreprise.png" alt="Services entreprise">
+        </div>
+      </div>
+    
+      <!-- Bloc 2 : Services pour les écoles -->
+      <div class="about-section about-image">
+        <div class="about-image">
+          <img src="assets/logitiels.jpg" alt="Logiciels pour école">
+        </div>
+        <div class="about-text">
+          <h3>🏫 Solutions pour la gestion de vos entreprises</h3>
+          <p>
+            Nous développons des <strong>logiciels de gestion sur mesure</strong> pour simplifier la vie des entreprises et organisations.  
+  Suivi des stocks, gestion des ventes, facturation, planning ou administration, chaque solution est conçue pour optimiser vos processus et gagner en efficacité.
+          </p>
+        </div>
+      </div>
+    
+      <!-- Bloc 3 : Services pour les entrepreneurs -->
+      <div class="about-section">
+        <div class="about-text">
+          <h3>💼 Accompagnement des entrepreneurs</h3>
+          <p>
+            Que vous soyez indépendant ou créateur de startup, nous vous aidons à construire votre présence digitale :  
+            logo, site web, identité visuelle et communication en ligne.  
+            Avec <strong>Code&Créa</strong>, votre image devient votre force.
+          </p>
+        </div>
+        <div class="about-image">
+          <img src="assets/startup.jpeg" alt="Entrepreneur et digitalisation">
+        </div>
+      </div>
+    
+      <!-- Bloc 4 : Nos valeurs -->
+      <div class="about-section about-image">
+        <div class="about-image">
+          <img src="assets/valeurs.jpeg" alt="Valeurs Code&Créa">
+        </div>
+        <div class="about-text">
+          <h3>💎 Nos valeurs</h3>
+          <p>
+            Chez nous, la créativité rencontre la rigueur.  
+            Nous croyons en l’innovation, la transparence et la satisfaction client avant tout.  
+            Chaque projet est traité avec soin, passion et engagement, quel que soit sa taille.
+          </p>
+        </div>
+      </div>
+      <div class="container about-inner">
+        <div class="about-text" data-anim>
+         
+          <ul>
+            <li>Mission : Faciliter la transformation digitale</li>
+            <li>Créativité : chaque projet est une nouvelle idée à faire briller.</li>
+            <li>Rigueur : respect des délais et des attentes.</li>
+            <li>Transparence : communication claire avec les clients.</li>
+            <li>Qualité : des projets professionnels, durables et performants.</li>
+          </ul>
+        </div>
+        <div class="about-illustration" data-anim>
+          <!-- Simple SVG animation -->
+          <svg viewBox="0 0 200 200" class="illus" aria-hidden="true">
+            <g transform="translate(100,100)">
+              <rect x="-60" y="-60" width="120" height="120" rx="12" class="illu-rect"/>
+              <circle cx="0" cy="-20" r="10" class="illu-dot"/>
+              <rect x="-30" y="20" width="60" height="8" rx="4" class="illu-bar"/>
+            </g>
+          </svg>
+        </div>
+    </section>
+    
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section contact">
+    <div class="container">
+      <h3 class="section-title">Contact</h3>
+      <div class="contact-grid">
+        <form id="contact-form" class="contact-form" data-anim action="sendmail.php" method="POST">
+          <label for="name">Nom</label>
+          <input id="name" name="name" type="text" placeholder="Votre nom" required>
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="votre@exemple.com" required>
+
+          <label for="numero">Numéro</label>
+          <input id="numero" name="numero" type="numero" placeholder="votre numéro de téléphone" required>
+
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" placeholder="Décrivez votre projet" required></textarea>
+
+          <button type="submit" class="btn btn-primary">Envoyer</button>
+          <p id="form-msg" class="form-msg" aria-live="polite"></p>
+          
+        </form>
+
+        <div class="contact-details" data-anim>
+          <h4>Infos</h4>
+          <p><strong>Email</strong><br>code.crea.sn@gmail.com</p>
+          <p><strong>Téléphone</strong><br>+221 77 087 15 48</p>
+          <h5>Adresse</h5>
+          <p>Thiès, Sénégal</p>
+          <div class="socials">
+            <a href="https://www.facebook.com/profile.php?id=61579358841929" aria-label="Facebook"><i class="fab fa-facebook-f fa-4x"></i></a>
+            <a href="https://www.instagram.com/code.crea.sn" aria-label="Instagram"><i class="fab fa-instagram fa-4x"></i></a>
+            <a href="https://www.tiktok.com/@codecrea" aria-label="TikTok"><i class="fab fa-tiktok fa-4x"></i></a>
+            <a href="https://www.youtube.com/@CodeCr%C3%A9a-sn" aria-label="YouTube"><i class="fab fa-youtube fa-4x"></i></a>     
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Code&Créa — Tous droits réservés</p>
+      <a href="#home" id="back-to-top" class="back-top" title="Retour en haut"><i class="fa fa-arrow-up"></i></a>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a class="whatsapp-float" href="https://whatsapp.com/biz/" target="_blank" aria-label="WhatsApp">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
+         alt="WhatsApp" class="whatsapp-icon">
+  </a>
+
+  <script src="script.js"></script>
+
+  <script>
+    const buttons = document.querySelectorAll(".details-btn");
+    const modals = document.querySelectorAll(".modal");
+    const closes = document.querySelectorAll(".close");
+  
+    buttons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        document.getElementById(btn.dataset.modal).style.display = "block";
+      });
+    });
+  
+    closes.forEach(close => {
+      close.addEventListener("click", () => {
+        close.parentElement.parentElement.style.display = "none";
+      });
+    });
+  
+    window.onclick = function(e) {
+      modals.forEach(m => {
+        if (e.target == m) m.style.display = "none";
+      });
+    };
+  </script>
+
+
+
+  
+
+</body>
+</html>
