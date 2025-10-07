@@ -416,6 +416,34 @@
   }
 }
 
+/* Animation uniquement sur ordinateur */
+@media screen and (min-width: 769px) {
+  .hero-text {
+    animation: floatText 6s ease-in-out infinite;
+  }
+
+  @keyframes floatText {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-15px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+}
+
+/* Désactiver l'animation sur mobile */
+@media screen and (max-width: 768px) {
+  .hero-text {
+    animation: none;
+    transform: none;
+  }
+}
+
+
 
 
 
