@@ -409,6 +409,14 @@
   transform: scale(1.05);
 }
 
+/* Cacher l'illustration sur les écrans mobiles */
+@media screen and (max-width: 768px) {
+  .about-illustration {
+    display: none;
+  }
+}
+
+
 
 
   
