@@ -137,6 +137,22 @@
     .brand h1{font-size:16px}
     .headline{font-size:20px}
   }
+  @media (max-width:1000px){
+    .nav { display: none; }
+    .nav.open {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      background: rgba(255,255,255,0.95);
+      padding: 10px 20px;
+      position: absolute;
+      top: 60px; /* selon la hauteur de ton header */
+      right: 0;
+      width: 200px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+  }
 
   .social {
     margin-top: 20px;
