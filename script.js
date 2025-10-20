@@ -146,6 +146,16 @@ document.addEventListener('DOMContentLoaded', function() {
     entry.target.classList.add('visible');
     io.unobserve(entry.target);
   }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const navToggle = document.getElementById('nav-toggle');
+    const nav = document.querySelector('.nav');
+  
+    navToggle.addEventListener('click', () => {
+      nav.classList.toggle('open');
+    });
+  });
+  
   
   
 
