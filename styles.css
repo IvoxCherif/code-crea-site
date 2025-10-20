@@ -443,6 +443,111 @@
   }
 }
 
+/* SECTION TARIFS */
+.pricing-section {
+  padding: 80px 5%;
+  background: #f9fafb;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  color: #111;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.section-subtitle {
+  color: #666;
+  margin-bottom: 50px;
+}
+
+.pricing-category {
+  margin-bottom: 70px;
+}
+
+.pricing-category h3 {
+  font-size: 1.6rem;
+  color: #1a1a1a;
+  margin-bottom: 25px;
+}
+
+.pricing-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  width: 300px;
+  transition: all 0.3s ease;
+  padding: 25px;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.card.featured {
+  border: 2px solid #007bff;
+}
+
+.card h4 {
+  color: #111;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.card .price {
+  font-size: 1.6rem;
+  color: #007bff;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.card ul {
+  list-style: none;
+  padding: 0;
+  color: #555;
+  line-height: 1.8;
+}
+
+.card ul li::before {
+  content: "✔ ";
+  color: #007bff;
+  font-weight: bold;
+}
+
+@media (max-width: 900px) {
+  .pricing-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.btn-devis {
+  display: inline-block;
+  margin-top: 15px;
+  background: #ff9900;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-devis:hover {
+  background: #e68500;
+  transform: scale(1.05);
+}
+
+
+
 
 
 
