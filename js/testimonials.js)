@@ -1,0 +1,21 @@
+const track = document.getElementById('testimonial-track');
+const testimonials = document.querySelectorAll('.testimonial');
+let index = 0;
+
+// Largeur d'un avis + gap
+const testimonialWidth = testimonials[0].offsetWidth + 20; 
+
+function slideTestimonials() {
+  index++;
+  if(index >= testimonials.length) index = 0;
+  track.style.transform = `translateX(-${testimonialWidth * index}px)`;
+}
+
+// Slide automatique toutes les 3 secondes
+setInterval(slideTestimonials, 3000);
+
+// Ajuster si la fenêtre change de taille
+window.addEventListener('resize', () => {
+  const testimonialWidthNew = testimonials[0].offsetWidth + 20;
+  track.style.transform = `translateX(-${testimonialWidthNew * index}px)`;
+});
