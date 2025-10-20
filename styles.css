@@ -546,6 +546,250 @@
   transform: scale(1.05);
 }
 
+.about-section {
+  padding: 100px 10%;
+  background: #f9f9f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+}
+
+.about-image {
+  flex: 1;
+  min-width: 280px;
+  text-align: center;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease;
+}
+
+.about-image img:hover {
+  transform: scale(1.05);
+}
+
+.about-text {
+  flex: 2;
+  min-width: 300px;
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  color: #111;
+  margin-bottom: 15px;
+}
+
+.about-text p {
+  color: #444;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+.about-text h3 {
+  margin-top: 20px;
+  color: #333;
+  font-size: 1.3rem;
+}
+
+.skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0;
+}
+
+.skills-list li {
+  background: #fff;
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.skills-list li:hover {
+  transform: translateX(5px);
+  background: #f0f0f0;
+}
+
+.about-quote {
+  margin-top: 25px;
+  font-style: italic;
+  color: #666;
+  border-left: 3px solid #007BFF;
+  padding-left: 10px;
+}
+/* Centrage des cartes de devis */
+.pricing-category h3 {
+  text-align: center;
+}
+
+.pricing-category .pricing-cards {
+  display: flex;
+  justify-content: center;
+}
+
+.pricing-category .pricing-card {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/* SECTION PROMO */
+.promo-section {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 20px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.promo-content {
+  max-width: 800px;
+}
+
+.promo-title {
+  font-size: 4rem;
+  font-weight: 900;
+  color: #ff4d4d;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.promo-text {
+  font-size: 1.3rem;
+  color: #eee;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.promo-text strong {
+  color: #ff4d4d;
+}
+
+.promo-btn {
+  display: inline-block;
+  background-color: #ff4d4d;
+  color: #fff;
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.promo-btn:hover {
+  background-color: #ff1f1f;
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .promo-title {
+    font-size: 3rem;
+  }
+
+  .promo-text {
+    font-size: 1.1rem;
+  }
+}
+/* Slider container */
+.testimonial-slider {
+  overflow: hidden;
+  position: relative;
+  margin-top: 30px;
+}
+
+/* Track qui défile */
+.testimonial-track {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Chaque avis */
+.testimonial {
+  min-width: 300px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  flex-shrink: 0;
+}
+
+.testimonial p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.testimonial cite {
+  font-size: 0.9rem;
+  color: #007bff;
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 1000px) {
+  .testimonial {
+    min-width: 250px;
+  }
+}
+@media (max-width: 600px) {
+  .testimonial {
+    min-width: 200px;
+  }
+}  
+
+.body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.background-image {
+  position: fixed;   /* reste toujours en arrière-plan */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('assets/fond.jpg'); /* change avec ton image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.3;  /* règle l’opacité ici */
+  z-index: -1;   /* derrière tout le contenu */
+}
+
+.site-content {
+  position: relative;
+  z-index: 0;
+  padding: 20px;
+  color: #000; /* texte visible */
+}
+
+
+
+
+
+
+
+
+
 
 
 

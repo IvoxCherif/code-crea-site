@@ -142,5 +142,17 @@ document.addEventListener('DOMContentLoaded', function() {
   
   });
 
+  if(entry.isIntersecting){
+    entry.target.classList.add('visible');
+    io.unobserve(entry.target);
+  }
+  
+  
+
+
+  
+
+  
+
   
   
