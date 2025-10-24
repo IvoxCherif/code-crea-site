@@ -826,6 +826,265 @@
     display: inline-flex;
   }
 }
+.services {
+  text-align: center;
+  padding: 80px 20px;
+  background: #f9f9f9;
+}
+
+.section-title {
+  font-size: 2.2em;
+  color: #111;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 25px;
+}
+
+.service-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.service-card h3 {
+  color: #1a1a1a;
+  margin-bottom: 15px;
+  font-size: 1.4em;
+  font-weight: 600;
+}
+
+.service-card ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.service-card ul li {
+  margin-bottom: 8px;
+  color: #000000;
+  font-size: 0.95em;
+  position: relative;
+  padding-left: 18px;
+}
+
+.service-card ul li::before {
+  content: "•";
+  color: #0078ff;
+  position: absolute;
+  left: 0;
+}
+
+.btn-devis {
+  display: inline-block;
+  background: #0078ff;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  transition: background 0.3s ease;
+}
+
+.btn-devis:hover {
+  background: #005fcc;
+}
+/* ---- Popup ---- */
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 450px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  text-align: left;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px; right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #82b0e4;
+}
+
+.popup-content h3 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.popup-content label {
+  display: block;
+  margin: 8px 0 4px;
+  font-weight: 500;
+}
+
+.popup-content input,
+.popup-content textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 0.95em;
+}
+
+.popup-content textarea {
+  min-height: 80px;
+}
+
+.popup-content .btn-devis {
+  margin-top: 15px;
+  width: 100%;
+  text-align: center;
+}
+.tarif-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  text-align: center;
+  width: 300px;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animation lumineuse au survol */
+.tarif-card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(0, 123, 255, 0.15) 0%, transparent 70%);
+  transform: rotate(45deg);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.tarif-card:hover::before {
+  opacity: 1;
+}
+
+/* Animation carte au survol */
+.tarif-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 10px 25px rgba(145, 160, 177, 0.25);
+}
+
+/* Titre mis en avant */
+.tarif-card h3 {
+  font-size: 1.8em;
+  color: #007bff;
+  margin-bottom: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Texte descriptif */
+.tarif-card p {
+  color: #555;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+/* Liste des avantages */
+.tarif-card ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.tarif-card li {
+  margin: 8px 0;
+  color: #333;
+}
+
+/* Prix */
+.tarif-card .price {
+  font-size: 1.6em;
+  font-weight: 800;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+/* Bouton animé */
+.btn-devis {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.btn-devis:hover {
+  background: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Couleurs spéciales selon les formules */
+.tarif-card.basic {
+  border-top: 5px solid #00bcd4;
+}
+
+.tarif-card.premium {
+  border-top: 5px solid #007bff;
+  background: linear-gradient(135deg, #f0f6ff, #ffffff);
+}
+
+.tarif-card.gold {
+  border-top: 5px solid #ffb300;
+  background: linear-gradient(135deg, #fff9e6, #ffffff);
+}
+
+/* Animation d’apparition */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tarif-card {
+  animation: fadeUp 0.6s ease forwards;
+}
+
+
+
 
 
 
