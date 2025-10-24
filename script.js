@@ -7,23 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Year
     document.getElementById('year').textContent = new Date().getFullYear();
   
-    // Typewriter slogan
-    const typeEl = document.getElementById('typewriter');
-    const texts = ['Transformez vos idées en solutions digitales', 'Design — Développement — Stratégie'];
-    let tIndex = 0, charIndex = 0, forward = true;
-    function typeLoop(){
-      const txt = texts[tIndex];
-      if(forward){
-        charIndex++;
-        if(charIndex > txt.length){ forward = false; setTimeout(typeLoop, 1400); return; }
-      } else {
-        charIndex--;
-        if(charIndex === 0){ forward = true; tIndex = (tIndex+1) % texts.length; setTimeout(typeLoop, 500); return; }
-      }
-      typeEl.textContent = txt.slice(0,charIndex);
-      setTimeout(typeLoop, forward ? 50 : 30);
-    }
-    typeLoop();
+    
   
     // Slider simple
     const slides = document.querySelectorAll('.slide');
