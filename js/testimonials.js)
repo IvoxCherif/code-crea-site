@@ -1,21 +1,29 @@
+<script>
 const track = document.getElementById('testimonial-track');
 const testimonials = document.querySelectorAll('.testimonial');
 let index = 0;
 
-// Largeur d'un avis + gap
-const testimonialWidth = testimonials[0].offsetWidth + 20; 
+// Fonction pour récupérer la largeur d'un testimonial + gap
+function getTestimonialWidth() {
+  const style = window.getComputedStyle(testimonials[0]);
+  const marginRight = parseInt(style.marginRight) || 0;
+  return testimonials[0].offsetWidth + marginRight;
+}
 
 function slideTestimonials() {
   index++;
   if(index >= testimonials.length) index = 0;
-  track.style.transform = `translateX(-${testimonialWidth * index}px)`;
+  track.style.transition = "transform 0.5s ease";
+  track.style.transform = `translateX(-${getTestimonialWidth() * index}px)`;
 }
 
 // Slide automatique toutes les 3 secondes
-setInterval(slideTestimonials, 3000);
+let interval = setInterval(slideTestimonials, 3000);
 
 // Ajuster si la fenêtre change de taille
 window.addEventListener('resize', () => {
-  const testimonialWidthNew = testimonials[0].offsetWidth + 20;
-  track.style.transform = `translateX(-${testimonialWidthNew * index}px)`;
+  track.style.transition = "none"; // désactive la transition temporairement
+  track.style.transform = `translateX(-${getTestimonialWidth() * index}px)`;
+  setTimeout(() => track.style.transition = "transform 0.5s ease", 50); // réactive transition
 });
+</script>
