@@ -1,4 +1,4 @@
-/* Globals & helpers */
+avis/* Globals & helpers */
 document.addEventListener('DOMContentLoaded', function() {
     // Hide loader after minimal delay
     const loader = document.getElementById('loader');

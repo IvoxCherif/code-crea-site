@@ -4,6 +4,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $subject = "Nouveau message depuis le site Code&Créa";
     $name = $_POST["name"];
     $email = $_POST["email"];
+    $numero = $_POST["numero"];
     $message = $_POST["message"];
     
     $headers = "From: $email";
